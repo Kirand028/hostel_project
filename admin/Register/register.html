@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title>
+<script>
+   function backbutton(){
+            window.location.href='http://localhost/hostel/home/home.html';
+
+   }
+  function db() {
+    var button = document.getElementById("sub");
+    button.disabled = true;
+
+  }
+
+ 
+  
+
+  function validateInput(event) {
+    const input = event.target;
+    const value = input.value;
+    const sanitizedValue = value.replace(/[^A-Za-z]/g, '');
+    input.value = sanitizedValue;
+  }
+  function validateInputName(event) {
+    const input = event.target;
+    const value = input.value;
+    const sanitizedValue = value.replace(/[^A-Za-z ]/g, '');
+    input.value = sanitizedValue;
+  }
+
+
+  function vIn(event) {
+    const input = event.target;
+    const value = input.value;
+    const sanitizedValue = value.replace(/[^A-Za-z0-9 ]/g, '');
+    input.value = sanitizedValue;
+  }
+
+  function vInput(event) {
+  const input = event.target;
+  const value = input.value;
+  const sanitizedValue = value.replace(/[^a-zA-Z0-9]/g, '');
+  input.value = sanitizedValue;
+}
+function veInput(event) {
+  const input = event.target;
+  const value = input.value;
+  const sanitizedValue = value.replace(/[^@.a-zA-Z0-9]/g, '');
+  input.value = sanitizedValue;
+}
+function vsInput(event) {
+  const input = event.target;
+  const value = input.value;
+  const sanitizedValue = value.replace(/[^a-zA-Z0-9,/ ]/g, '');
+  input.value = sanitizedValue;
+}
+function vsdInput(event) {
+  const input = event.target;
+  const value = input.value;
+  const sanitizedValue = value.replace(/[^a-zA-Z ]/g, '');
+  input.value = sanitizedValue;
+}
+
+  function sanitizeBloodGroup(event) {
+    const input = event.target;
+    let value = input.value.toUpperCase(); // Convert to uppercase for consistent comparison
+    
+    // List of valid blood groups
+    const validBloodGroups = ['A', 'B', 'AB', 'O', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
+    
+    // Check if the input value is a valid blood group
+    if (!validBloodGroups.includes(value)) {
+      value = ''; // Clear the input value if it is not valid
+    }
+    
+    input.value = value;
+  }
+
+  
+  
+
+  function disableSubmitButton() {
+    var submitButton = document.getElementById('sub');
+    // submitButton.disabled = true;
+    // submitButton.innerHTML = 'Submitting...'; // Optionally, update the button label
+
+    // Optionally, you can add a delay to re-enable the button after a specific duration
+    setTimeout(function() {
+      submitButton.disabled = true;
+    //   submitButton.innerHTML = 'Submit';
+    }, 10); // 3000 milliseconds = 3 seconds
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get today's date
+    var today = new Date();
+    
+    // Format the date as "YYYY-MM-DD"
+    var formattedDate = today.toISOString().split('T')[0];
+    
+    // Set the value of the date input field
+    document.getElementById("jdate").value = formattedDate;
+  });
+
+
+
+
+
+  function updateMinCheckoutDate() {
+    // Get the selected joining date
+    var joiningDateInput = document.getElementById("jdate");
+    var joiningDate = new Date(joiningDateInput.value);
+    
+    // Calculate the minimum checkout date (6 months after joining date)
+    var minCheckoutDate = new Date(joiningDate);
+    minCheckoutDate.setMonth(joiningDate.getMonth() + 6);
+    
+    // Format the date as "YYYY-MM-DD"
+    var formattedDate = minCheckoutDate.toISOString().split('T')[0];
+    
+    // Set the minimum value of the checkout date input field
+    document.getElementById("checkoutDate").setAttribute("min", formattedDate);
+    
+    // Reset the value of the checkout date input field
+    document.getElementById("checkoutDate").value = "";
+    
+    // Enable dates starting from the minimum date in the date picker
+    document.getElementById("checkoutDate").removeAttribute("disabled");
+  }
+
+</script>
+<style>
+    input{
+        text-transform: uppercase;
+    }
+</style>
+</head>
+<body onload="updateMinCheckoutDate()">
+    
+    <div class="container">
+        <form method="POST" action="register.php" onsubmit="disableSubmitButton()" autocomplete="off">
+
+        <!-- <form method="POST" action="register.php" > -->
+            <div class="logo">
+            <h1 class="hdng">REGISTER</h1>
+            </div>
+
+            <div class="pd">
+
+                <div class="pdalign">
+
+
+                    <input class="name" type="text" name="fname" placeholder="FIRST NAME" id="myInput" oninput="validateInput(event)" required>
+                    <input class="fname" type="text" name="lname" placeholder="LAST NAME" id="myInput" oninput="validateInputName(event)" required>
+                    <input class="fname" type="text" name="fmname" placeholder="FATHER / MOTHER NAME" required id="myInput" oninput="vsdInput(event)">
+                    <input class="dob" type="date" name="dob" title="BIRTH DATE" placeholder="DATE OF BIRTH" min="1990-01-01" max="2005-01-01" required>
+                    <input class="name" type="text" name="blood" placeholder="BLOOD GROUP" required id="myBloodg" oninput="sanitizeBloodGroup(event)">
+
+                    <select class="selalgn" name="gender" id="" title="Select Gender">
+                    <!-- <input class="fname" type="text" placeholder="GENDER"> -->
+                    <option >MALE</option>
+                    <option >FEMALE</option>
+                </select>
+                    <input class="fname" type="text" placeholder="CASTE" name="caste" required id="myInput" oninput="validateInput(event)">
+                    <input class="fname" type="number" min="100000000000" max="999999999999" placeholder="AADHAR NUMBER" name="adhar" required>
+
+                </div>    
+            </div>
+
+            </div>
+            <div class="eq">
+                <div class="eqalign">
+                    <input class="name" type="text" placeholder="COLLEGE NAME" name="clgname" required id="myInput" oninput="vIn(event)">
+                <input class="fname" type="text" placeholder="REGISTER NUMBER" name="regno" oninput="vInput(event)" required>
+                <select id="" name="course" title="Select Course">
+                    <option>BCA</option>
+                    <option>BBA</option>
+                    <option>BCOM</option>
+                    <option>BSC</option>
+                    <option>BA</option>
+                </select>
+                <input class="fname" type="text" placeholder="ROLL NUMBER" name="rollno" oninput="vInput(event)" required>
+                <input class="name" type="number" min="1" max="4" placeholder="COURSE DURATION" name="coursedur" required>
+                <input class="fname" type="number" min="35" max="100" placeholder="PREVIOUS YEAR MARKS IN %" name="pymark" required>
+                <input class="join" type="date" title="JOINING DATE" placeholder="JOINING DATE" name="joindate" id="jdate" readonly>
+                <input class="fname" type="date" name="stay" title="CHECKOUT DATE" id="checkoutDate" max="2035-12-31" required>
+
+
+                    
+                    </div>
+                    
+            </div>
+            <div class="ad">
+                <div class="adalign">
+                    <input class="name" type="number" min="1000000000" max="9999999999" placeholder="MOBILE NUMBER" name="mobno" required>
+                    <input class="fname" type="number" min="1000000000" max="9999999999" placeholder="PARENT'S MOBILE NUMBER" name="pmobno" required>
+                    <input class="dob" type="email" placeholder="EMAIL" name="regemail" oninput="veInput(event)" required>
+                    <input class="fname" type="text" placeholder="PERMANENT ADDREESS" name="paddress" oninput="vsInput(event)" required>
+                    <input class="name" type="text" placeholder="COUNTRY" name="country" required id="myInput" oninput="validateInput(event)">
+                    <input class="fname" type="text" placeholder="STATE" name="state" required id="myInput" oninput="validateInput(event)">
+                    <input class="dob" type="text" placeholder="DISTRICT" name="district" required id="myInput" oninput="validateInput(event)">
+                    <input class="fname" type="number" min="100000" max="999999" placeholder="PINCODE" name="pincode" required>
+                    </div>
+                    
+            </div>
+
+            <div class="balgn">
+                <!-- <input type="submit" value="SUBMIT" name="register" class="signin" onsubmit="disableButton()"> -->
+            <!-- <button class="signin" name="register" id="sub" onsubmit="disableSubmitButton()">SUBMIT</button> -->
+            <button class="signin" name="register" id="sub" >SUBMIT</button>
+
+        </form>
+            
+            <button class="back" onclick="backbutton();" >BACK</button>
+        </div>
+            
+    </div>
+
+
+</body>
+</html>

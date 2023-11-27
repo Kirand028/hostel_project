@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    
+
+
+    <nav>
+        <div class="logo">
+            <div class="nav">
+            <label onclick="play()" for=""><a href="http://localhost/hostel/Register/register.html">REGISTER</a></label>
+            <label onclick="play()" for=""><a href="http://localhost/hostel/login/index.html">LOGIN</a></label>
+            <label onclick="play()" for=""><a href="#">COMPLAINT</a></label>
+            <label onclick="play()" for=""><a href="#contact">ABOUT</a></label>
+            <label onclick="play()" for=""><a href="#contact">CONTACT</a></label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body1">
+        
+        <div class="b1">
+                <img src="boys_hostel.jpg" alt="Image1" >
+                <!-- <img src="boys_hostel.jpg" alt="Image1" > -->
+                <img src="hostelroom.jpg" alt="Image2" >
+                <img src="hostelroom_dark.jpg" alt="Image2" >
+            <div class="tpos">
+                <div class="text">HOSTEL <br> MANAGEMENT SYSTEM </div>
+               </div>
+
+            <section class="sticky">
+                <div class="bubbles">
+                    <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+ 
+
+
+    <div class="body2" >
+        
+        <div class="b2">
+
+            <div class="cards">
+
+                
+
+                <div class="card1" >
+                    <h1>ROOM</h1>
+                        <h2>WELL HYGENIC SEPERATE ROOMS FOR <BR> BOYS & GIRLS</h2>
+                    <div class="incard1"><i class="fa fa-bed"></i></div>
+                </div>
+
+                <div class="card2">
+                    <h1>SECURITY</h1>
+                    <h2>WE WILL TAKE CARE OF YOUR CHILDRENS</h2>
+                    <div class="incard1"><i class="fa fa-lock"></i><i class="fa fa-eye-slash"></i></div>
+                </div>
+
+                <div class="card3">
+                    <h1>FOODS</h1>
+                        <h2>A WELL SKILLED CHEFS PREPARES <BR> A PERFECT FOOD FOR STUDENTS</h2>
+                    <div class="incard1"><i class="fa fa-pizza-slice"></i><i class="fa fa-hamburger"></i><i class="fa fa-spoon"></i></div>
+                </div>
+                
+            </div> 
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer"  id="contact">
+            <div class="p1">
+                <div class="img"></div>
+                <label class="l1" for="">Radhesh <span class="span">Founder and Director</span> <span class="span1"> Working At HongKong</span></label>
+            </div>
+
+            <div class="p2">
+                <div class="img"></div>
+                <label class="l2" for="">Kiran <span class="span">CEO</span> <span class="span1"> Working At Japan</span></label>
+            </div>
+
+            <div class="p3">
+                <div class="img"></div>
+                <label class="l3" for="">Nawin <span class="span">Maintainer</span> <span class="span1"> Working At Bangkok</span> </label>
+            </div>
+        </div>
+
+        <div class="contact">
+
+            <div class="c1" onclick="play()" >
+               <a href="" onclick="play()" > <i class="fa fa-envelope fa-beat"></i> </a>
+            </div>
+
+            <div class="c2">
+            <a href="" onclick="play()" ><i class="fa fa-phone fa-beat"></i> </a>
+            </div>
+
+            <div class="c3">
+                <a href="" onclick="play()"><i class="fa-brands fa-twitter fa-beat"></i></a>
+            </div>
+
+            <div class="c4">
+                <a href="" onclick="play()" ><i class="fa-solid fa-address-book fa-beat"></i></a>
+            </div>
+
+        </div>
+
+      
+
+        <div class="cprt">
+        <h3>ALL COPYRIGHT AND CREDIT GOES TO <span class="span"> RNS @ 2023 </span></h3>
+        </div>
+    </footer>
+
+<script>
+
+const carousel = document.querySelector('.b1');
+const images = carousel.querySelectorAll('img');
+let index = 0;
+
+function slide() {
+  
+  images.forEach(image => image.style.display = 'none');
+  images[index].style.display = 'inline-block';
+
+  index = (index + 1) % images.length;
+  
+}
+
+setInterval(slide, 4000);
+
+</script>
+
+
+  
+
+
+
+</body>
+</html>

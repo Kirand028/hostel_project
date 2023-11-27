@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Management System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      /* background-image: url(aa.jpg);
+      background-size: cover;
+      background-repeat: no-repeat; */
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      /* padding: 20px; */
+      background-color: black;
+      /* background-image: url(aa.jpg); */
+      color: white;
+      border-radius: 0px 0px 60px 60px;
+      box-shadow: 4px 4px 7px rgba(79, 148, 127), -4px -4px 7px rgba(84, 124, 112);
+    }
+
+    .navbar a {
+      margin-right: 50px;
+      /* color: rgb(26, 22, 22); */
+      color: white;
+      text-decoration: none;
+      font-weight: 580;
+    }
+
+    .navbar h2 {
+      margin-right:250px;
+      font-size: 32px;
+    }
+
+    .navbar .logo {
+      background-color: transparent;
+      box-shadow: 4px 4px 7px rgba(189, 200, 213), -4px -4px 7px rgba(255, 255, 255);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right:35px;
+    }
+
+    .fa-hotel {
+      /* color: black; */
+      /* color: rgba(93, 223, 223, 0.767); */
+      font-size: 26px;
+    }
+
+    .carousel-container {
+      margin-top: 50px;
+      margin-left: 1%;
+      position: relative;
+      width: 98%;
+      height: 540px;
+      overflow: hidden;
+      border-radius: 80px 0px 80px 0px;
+      box-shadow: 4px 4px 7px rgba(79, 148, 127), -4px -4px 7px rgba(84, 124, 112);
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+    .carousel-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .carousel-content h1 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 2px black;
+    }
+
+    .carousel-content p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #3edfc9;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #09f7d7;
+      border-radius: 10px;
+    }
+
+    /* Responsive Styles */
+    @media only screen and (max-width: 768px) {
+      .navbar {
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .navbar h2 {
+        margin-right: 0;
+        font-size: 16px;
+      }
+
+      .navbar a {
+        margin-right: 10px;
+      }
+
+      .carousel-container {
+        margin-top: 30px;
+        height: 300px;
+        border-radius: 40px 0px 40px 0px;
+      }
+
+      .carousel-content h1 {
+        font-size: 20px;
+        /* margin-left: 0; */
+      }
+
+      .carousel-content p {
+        font-size: 14px;
+        /* margin-bottom: 20px; */
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+      
+      .footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .contact{
+        margin-left:0;
+        /* margin-bottom:-230px; */
+      }
+
+
+    }
+
+
+    .footer {
+      background-color: #1c1c1c;
+      /* background-image: url('aa.jpg'); */
+      box-shadow: 4px 4px 7px rgba(79, 148, 127), -4px -4px 7px rgba(84, 124, 112);
+      /* background-size:1px; */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      top:85px;
+      border-radius: 100px 100px 0 0;
+      /* left: 0; */
+      /* bottom: 0; */
+      width: 100%;
+      height: auto;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: black;
+      border-radius: 8px;
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: white;
+      /* background-image: url('aa.jpg'); */
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.5);
+    }
+
+
+    .footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+
+    .scroll-button {
+      position: fixed;
+      bottom: 50px;
+      right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      /* background-image: url('aa.jpg'); */
+      /* background-size: contain; */
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 23px;
+      cursor: pointer;
+      opacity: 0.8;
+      z-index: 1;
+      transition: opacity 0.3s;
+    }
+
+    .scroll-button.up {
+      bottom: unset;
+      top: 600px;
+    }
+
+    .scroll-button.fade-out {
+      opacity: 0;
+    }
+
+    .contact{
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 600px;
+  margin-top:60px;
+  /* margin-right: 5%; */
+      
+}
+
+
+.c1, .c2, .c3, .c4{
+        /* background-color: rgb(230, 231, 233); */
+        background-image: url('aa.jpg');
+        background-size: cover;
+        box-shadow: inset  2px 2px 7px rgb(189 200 213),
+                    inset -2px -2px 7px rgb(255 255 255);
+        
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25px;  
+      }
+  
+  
+        .c1 a i,.c2 a i,.c3 a i,.c4 a i{
+          color:black;
+        } 
+
+
+
+  </style>
+  <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+</head>
+<body>
+  <div class="main">
+    <div class="navbar" id="navbar">
+      <div class="logo"><i class="fa fa-hotel"></i></div>
+      <h2>HOSTEL MANAGEMENT</h2>
+      <a href="http://localhost/hostel/login/index.html"><i class="fa fa-key"></i> Login</a>
+      <a href="http://localhost/hostel/Register/register.html"><i class="fa fa-calendar"></i> Register</a>
+      <a href="#" ><i class="fa fa-book"></i> Learn+</a>
+      <a href="#about"><i class="fa fa-user"></i> About</a>
+      <a href="#contact"><i class="fa fa-phone"></i> Contact</a>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-slide active" style="background-image: url('Hostel-for.jpg');">
+        <div class="carousel-content">
+          <h1>Welcome to our Hostel official page</h1>
+        </div>
+      </div>
+
+      <div class="carousel-slide" style="background-image: url('girls_hostel.jpg');">
+        <div class="carousel-content">
+          <h1>Register Before it's too late, Hurry!!!</h1>
+          <p>Book a room at a low price effortlessly. Easy to book a room and pay fees.</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide" style="background-image: url('boys_hostel.jpg');">
+        <div class="carousel-content">
+          <h1>Track your profile</h1>
+          <p>Track your profile, events held in the hostel, hostel food system, and more.</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide" style="background-image: url('hostelroom_dark.jpg');">
+        <div class="carousel-content">
+          <h1>Why Us?</h1>
+          <p>Because we provide a hostel room with a good environment and our hostel highly classified Rooms with AC and delicious meals from a skilled chef for both boys and girls. Enjoy the playgrounds, vast library, and more.</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="scroll-button down"><i class="fas fa-angle-down"></i></div> -->
+  </div>
+
+  <div class="footer">
+    <h3 id="about">About the Hostel</h3>
+    <p>Our hostel is a great place to stay with comfortable rooms, excellent hospitality, and more. We provide highly classified rooms with AC and delicious meals prepared by skilled chefs. Whether you're a boy or a girl, you can enjoy our amenities including playgrounds, a vast library, and more. Book a room now and experience the best hostel stay!</p>
+    <br><br>
+    <p>&copy; 2023 Hostel Management System. All rights reserved.</p>
+    
+      <div class="contact" id="contact">
+
+      <div class="c1" >
+         <a href=""  > <i class="fa fa-envelope fa-beat"></i> </a>
+      </div>
+
+      <div class="c2">
+      <a href=""  ><i class="fa fa-phone fa-beat"></i> </a>
+      </div>
+
+      <div class="c3">
+          <a href="" ><i class="fa-brands fa-twitter fa-beat"></i></a>
+      </div>
+
+      <div class="c4">
+          <a href="#" ><i class="fa-solid fa-address-book fa-beat"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-button down" title="Go Down"><i class="fas fa-angle-down" title="Go Down"></i></div>
+  <div class="scroll-button up" title="Go Up"><i class="fas fa-angle-up" title="Go Up"></i></div>
+  
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide) => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 6000);
+
+
+    const scrollUpButton = document.querySelector('.scroll-button.up');
+    const scrollDownButton = document.querySelector('.scroll-button.down');
+
+    scrollUpButton.style.display = 'none'; // Initially hide the scroll up button
+
+    scrollUpButton.addEventListener('click', () => {
+      window.scrollBy({
+        top: -window.innerHeight,
+        behavior: 'smooth'
+      });
+    });
+
+    scrollDownButton.addEventListener('click', () => {
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollPosition > 0) {
+        scrollUpButton.style.display = 'flex';
+        scrollDownButton.classList.add('fade-out');
+      } else {
+        scrollUpButton.style.display = 'none';
+        scrollDownButton.classList.remove('fade-out');
+      }
+    });
+
+    document.getElementById('navbar').addEventListener("click", function(event){
+      if(event.target.tagName==='A'){
+        play1();
+        setInterval(6000);
+      }
+    });
+
+    function play1(){
+        var sound=document.getElementById('csound');
+        sound.currentTime=0;
+        sound.play();
+    }
+
+  </script>
+  <audio id="csound">
+    <source src="b1.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>

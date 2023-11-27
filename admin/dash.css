@@ -1,0 +1,588 @@
+body {
+    
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight:400;
+  line-height:1.5;
+  color: #969ba0;
+  background-color: rgb(232 234 236);
+  }
+ 
+  .admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 90px;
+    background-color: rgb(232 234 236);
+    box-shadow: 4px 4px 7px rgb(189 200 213)
+, 
+    -4px -4px 7px rgb(255 255 255);
+    position: absolute;
+    top:20px;
+    left: 20px;
+    
+      
+ border-top-right-radius: 20px;
+ border-top-left-radius: 40px;
+    }
+
+    .fa-wallet{
+        color: black;
+        font-size: 40px;
+        position: absolute;
+        left: 30px;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #fb00b9, #004efd);
+    }
+
+    .admin h1{
+        letter-spacing: 10px;
+        position: absolute;
+        left: 90px;
+        color:black;
+        font-weight: bold;
+    }
+.sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 500px;
+    background-color: rgb(230, 231, 233);
+    box-shadow: 4px 4px 7px rgb(189 200 213),
+     -4px -4px 7px rgb(255 255 255)
+     ; 
+
+    position: absolute;
+    top:116px;
+    left: 20px;
+    border-bottom-right-radius:20px ;
+    border-bottom-left-radius: 20px;
+    
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    width: 240px;
+    height: 70px;
+    
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.img{
+    background-color: rgb(230, 231, 233);
+    box-shadow: 
+    /* logo shadow */
+   
+    /* offset */
+   
+    /*bottom right */
+    4px 4px 7px rgb(189 200 213),
+  
+    /* top left */
+    -4px -4px 7px rgb(255 255 255);
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: 20px;
+    background-image: url(admin.png)   ;
+}
+
+.hiadmin{
+    position: absolute;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    left: 90px;
+    top: 10px;
+    letter-spacing: 2px;
+    
+}
+
+ span{
+    color: #004efd;
+}
+
+.email{
+
+    color: #969ba0;
+    position: absolute;
+    top:30px;
+    left: 0px;
+    font-size: small;
+    font-weight: normal;
+}
+
+.menu a{
+    
+    text-decoration: none;
+    font-size: large;
+    color: #969ba0;
+    display: block;
+   padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 35px;
+    letter-spacing: 2px;
+    
+    
+}
+
+.menu{
+    margin-top: 100px;
+    margin-left: -16px;
+   
+}
+
+.menu a i{
+   
+    font-size: 30px;
+    color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #c20a0a, #000000);
+}
+
+.fa-user-nurse{
+    color: black;
+    font-size: 30px;
+}
+
+.menu a:active{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #c20a0a, #000000);
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1{
+    position: absolute;
+    color: black;
+    left: 320px;
+    top: 8px;
+    font-size: 41px;
+    font-weight: 600;
+}
+
+.navbar a{
+    background-image: linear-gradient(to left, #fb00b9, #004efd);
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.logout{
+    position: absolute;
+    top: 40px;
+    left: 1080px;
+}
+
+.fa-sign-out-alt{
+    margin-left: 2px;
+    
+
+}
+
+.navbar a:active{
+    background-image: linear-gradient(to right, #fb00b9, #004efd);
+    box-shadow: 4px 4px 8px rgb(255 255 255) , -4px -4px 8px  rgb(189 200 213) ;
+    border: 2px solid blue;
+}
+
+.card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 200px;
+    height: 150px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 130px;
+    left: 320px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));
+   
+
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 200px;
+    height: 150px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 130px;
+    left: 565px;
+    border-radius: 20px;
+    background-image: linear-gradient(to left, #fb00b9, #004efd);
+
+}
+
+.card3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 200px;
+    height: 150px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 130px;
+    left: 810px;
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(142, 45, 226), rgb(74, 0, 224));
+   
+
+}
+
+.card4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 200px;
+    height: 150px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 130px;
+    left: 1050px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #fb00b9, #004efd);
+   
+
+}
+
+.fa-user-circle{
+    position: absolute;
+    color: rgb(189 200 213);
+    font-size: 50px;
+    left: 21px;
+    top: 20px;
+   
+}
+
+.card1 h1{
+    position: absolute;
+    color: white;
+    top: -12px;
+    left: 100px;
+    font-size: 42px;
+}
+
+.card1 label{
+    position: absolute;
+    color: white;
+    top: 94px;
+    left: 28px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+.card2 h1{
+    position: absolute;
+    color: white;
+    top: -12px;
+    left: 100px;
+    font-size: 42px;
+}
+
+.card2 label{
+    position: absolute;
+    color: white;
+    top: 94px;
+    left: 28px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+.card3 h1{
+    position: absolute;
+    color: white;
+    top: -12px;
+    left: 100px;
+    font-size: 42px;
+}
+
+.card3 label{
+    position: absolute;
+    color: white;
+    top: 94px;
+    left: 28px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+.card4 h1{
+    position: absolute;
+    color: white;
+    top: -12px;
+    left: 100px;
+    font-size: 42px;
+}
+
+.card4 label{
+    position: absolute;
+    color: white;
+    top: 94px;
+    left: 28px;
+    font-size: 16px;
+}
+
+
+.card2 .fa-user{
+
+    position: absolute;
+    color: rgb(189 200 213);
+    font-size: 50px;
+    left: 21px;
+    top: 20px;
+
+}
+
+.fa-male{
+
+    position: absolute;
+    color: rgb(189 200 213);
+    font-size: 50px;
+    left: 24px;
+    top: 44px;
+    
+
+}
+
+
+.fa-female{
+
+    position: absolute;
+    color: rgb(189 200 213);
+    font-size: 50px;
+    right: 21px;
+    top: 49px;
+    
+
+}
+
+.fa-bed{
+
+    position: absolute;
+    color: rgb(189 200 213);
+    font-size: 50px;
+    left: 21px;
+    top: 20px;
+
+}
+.cd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cd1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 450px;
+    height: 140px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 320px;
+    left: 320px;
+    border-radius: 20px;
+    
+}
+.cd2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 450px;
+    height: 140px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 320px;
+    left: 808px;
+    border-radius: 20px;
+    
+}
+
+
+
+.cd3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 450px;
+    height: 140px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 480px;
+    left: 320px;
+    border-radius: 20px;
+    
+}
+
+
+.cd4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #e8eaec;
+    width: 450px;
+    height: 140px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    top: 480px;
+    left: 808px;
+    border-radius: 20px;
+    
+}
+
+.div{
+   
+    height: 140px;
+    background-color: #e8eaec;
+    border-left: 2px solid whitesmoke;
+}
+
+.boys{
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    top: 30px;
+    left: 80px;
+    font-weight: bold;
+}
+
+.girls{
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    top: 30px;
+    right: 100px;
+    font-weight: bold;
+
+}
+
+.bdata{
+
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    top: 80px;
+    left: 68px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #fb00b9, #004efd);
+        animation: slide 500ms infinite linear;
+
+}
+
+.gdata{
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    top: 80px;
+    right: 65px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #fb00b9, #004efd);
+        animation: slide 500ms infinite linear;
+}
+
+.student{
+    position: absolute;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to left, #fb00b9, #004efd);
+    font-weight: bold;
+    letter-spacing: 5px;
+    top: 10px;
+    font-size: 20px;
+    animation: slide 500ms infinite linear;
+
+}
+
+.cd4 h1{
+    position: absolute;
+}
+
+@keyframes slide {
+    0%{
+        background-image: linear-gradient(to right, #fb00b9, #004efd); 
+    }
+
+    100%{
+        background-image: linear-gradient(to left, #fb00b9, #004efd);
+    }
+    
+}
+
+.menu .active{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #c20a0a, #000000);
+}

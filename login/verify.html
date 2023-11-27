@@ -1,0 +1,148 @@
+
+<style>
+body{
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+  
+
+}
+.form {
+  width: 290px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff,
+    5px 5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  transition: .4s ease-in-out;
+  margin-top: 10%;
+  margin-left: 520px;
+}
+
+
+
+.heading {
+  position: relative;
+  text-align: center;
+  color: black;
+  top: 3em;
+  font-weight: bold;
+}
+
+.check {
+  position: relative;
+  align-self: center;
+  top: 4em;
+}
+
+.input {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff,
+    5px 5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  top: 6.5em;
+  left: 1.5em;
+  padding-left: 15px;
+
+}
+
+.input:hover {
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff,
+    5px 5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.input:focus {
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff,
+    5px 5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    border: 2px solid green;
+}
+
+.btn1 {
+  position: relative;
+  top: 8.5em;
+  left: 2.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff,
+    5px 5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn1:active {
+
+    outline:none;
+    background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: 3px 3px 6px 2px #ffffff,
+    -5px -5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+      font-weight: 900;
+      border: 2px solid green;
+      color: red;
+}
+a{
+  text-decoration:none;
+  color: black;
+}
+.btn2 {
+  position: relative;
+  top: -7.5em;
+  left: 41.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff,
+    5px 5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn2:active {
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: 3px 3px 6px 2px #ffffff,
+    -5px -5px 8px 0px rgba(0, 0, 0, 0.17), 
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+      font-weight: 900;
+      border: 2px solid green;
+      color: red;
+}
+</style>
+<script>
+  function backb(){
+      window.location.href='fpas.html';
+  }
+</script>
+<body>
+
+<form class="form" action="verify.php" method="POST">
+    <p class="heading">Verify OTP</p>
+
+    <div class="box">
+    <input class="input" name="ootp" type="password" maxlength="1" required>
+    <input class="input" name="sotp" type="password" maxlength="1" required> 
+    <input class="input" name="totp" type="password" maxlength="1" required>
+    <input class="input" name="fotp" type="password" maxlength="1" required>
+    </div>
+    <button class="btn1" name="verify">SUBMIT</button></form>
+    <button class="btn2" name="bck" onclick="backb();">BACK</button>
+  </body>

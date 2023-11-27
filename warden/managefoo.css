@@ -1,0 +1,382 @@
+*{
+    border: 0px;
+    box-sizing: border-box;
+    color: rgb(7, 7, 7);
+    /* background-color: rgb(230, 231, 233); */
+    
+    /* font-family: sans-serif; */
+}
+
+body
+{
+    background-image: url(salad-with-egg-white-background.jpg);
+    background-size: cover;
+    backdrop-filter: blur(1px);
+}
+.card1container{
+    position: absolute;
+    top: 110px;
+    left: 180px;
+   
+}
+
+.card1container h1{
+
+    position: absolute;
+    top:-110px;
+    left: -150px;
+    letter-spacing: 5px;
+    font-family: serif;
+    font-weight: 900;
+
+    font-size: 50px;
+
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(250deg, #fd0101, black);
+
+
+}
+
+.card1{
+
+    width: 900px;
+    height: 50px;
+    background-color: rgba(230, 231, 233, 0.575);
+    box-shadow: 4px 4px 7px rgb(189 200 213),
+     -4px -4px 7px rgb(255 255 255);
+     border-radius: 10px;
+   
+
+}
+
+.card2{
+    width: 900px;
+    height: 400px;
+    background-color: rgba(230, 231, 233, 0.575);
+    box-shadow: 4px 4px 7px rgb(189 200 213),
+     -4px -4px 7px rgb(255 255 255);
+     border-radius: 10px;
+     position: relative;
+     top: 50px;
+}
+
+.c1{
+    position: absolute;
+    background-color: gray;
+    height: 400px;
+    width: 1px;
+    left: 180px;
+    text-align: center;
+
+    
+}
+
+
+.c2{
+    position: absolute;
+    background-color: gray;
+    height: 400px;
+    width: 1px;
+    left: 360px;
+    text-align: center;
+   
+    
+}
+
+
+.c3{
+    position: absolute;
+    background-color: gray;
+    height: 400px;
+    width: 1px;
+    left: 540px;
+   
+}
+
+
+.c4{
+    position: absolute;
+    background-color: gray;
+    height: 400px;
+    width: 1px;
+    left: 720px;
+
+    
+
+    
+}
+
+.cr1{
+    position: absolute;
+    background-color: gray;
+    height: 50px;
+    width: 1px;
+    left: 180px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cr2{
+    position: absolute;
+    background-color: gray;
+    height: 50px;
+    width: 1px;
+    left: 360px;
+  
+    
+}
+
+
+.cr3{
+    position: absolute;
+    background-color: gray;
+    height: 50px;
+    width: 1px;
+    left: 540px;
+
+}
+
+.cr4{
+    position: absolute;
+    background-color: gray;
+    height: 50px;
+    width: 1px;
+    left: 720px;
+ 
+    
+}
+
+.week{
+    position: absolute;
+    color: red;
+    left: -130px;
+    top: 5px;
+    font-size: 25px;
+
+    
+}
+
+.lunchtime{
+
+    position: absolute;
+    color: red;
+    left: -155px;
+    top: 5px;
+    font-size: 25px;
+
+}
+
+.breakfasttime{
+
+    position: absolute;
+    color: red;
+    left: -150px;
+    top: 5px;
+    font-size: 25px;
+
+}
+
+.snacktime{
+    position: absolute;
+    color: red;
+    left: -150px;
+    top: 5px;
+    font-size: 25px;
+}
+
+
+.dinnertime{
+    position: absolute;
+    color: red;
+    right: 30px;
+    top: 5px;
+    font-size: 25px;
+}
+
+.days {
+    position: absolute;
+    left: -170px;
+    top: 45px;
+  color: #969ba0;
+
+}
+
+h2{
+    color: #34373a;
+}
+.breakfast{
+    position: absolute;
+    left: -170px;
+    top: 50px;
+  
+}
+input{
+    color: #34373a;
+    outline: none;
+    border: none;
+    border-radius: 0 15px 0  15px;
+    width: 160px;
+    height: 48.5px;
+    display: block;
+    font-family: serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+   line-height: 10px;
+   background-color: transparent;
+}
+
+.lunch{
+    position: absolute;
+    left: -170px;
+    top: 50px;  
+    
+}
+
+.snack{
+    position: absolute;
+    left: -170px;
+    top: 50px;   
+}
+
+.dinner{
+    position: absolute;
+    right: 10px;
+    top: 50px;   
+}
+
+.card1 input{
+    position: absolute;
+    left: 1px;
+    color: green;
+}
+
+
+.today{
+  position: absolute;
+  left: 35px;
+  top: -10px;
+  color: green;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 50px;
+    box-shadow: 4px 4px 7px rgb(189 200 213),
+     -4px -4px 7px rgb(255 255 255);
+    border-radius: 10px;
+    position: absolute;
+    /* background-color: rgb(29, 29, 29); */
+    font-weight: 900;
+    text-decoration: none;
+    /* color: transparent; */
+   /* -webkit-background-clip: text; */
+   background-image: linear-gradient(215deg, #f8f3f3, #bbb7b7);   
+   letter-spacing: 5px;
+   /* font-weight: 900; */
+}
+
+
+.btn:active{
+    width: 130px;
+    height: 50px;
+    box-shadow: -4px -4px 7px rgb(255 255 255),
+                4px 4px 7px rgb(189 200 213);
+    border-radius: 10px;
+    position: absolute;
+    /* background-color: rgb(29, 29, 29); */
+    
+    /* color: transparent; */
+   -webkit-background-clip: text;
+   background-image: linear-gradient(to left, #c20a0a, #000000);   
+   letter-spacing: 5px;
+   font-weight: 900;
+   
+
+}
+.bac{
+    position:absolute;
+    top:100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.baln{
+    position: absolute;
+    right: -50px;
+    top: 300px;
+}
+
+.ualn{
+    position: absolute;
+    right: -50px;
+    top: 200px;
+}
+
+/* .btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 4px 4px 7px rgb(189 200 213),
+     -4px -4px 7px rgb(255 255 255);
+    border-radius: 10px;
+     text-decoration: none;
+     outline: none;
+     border: none;
+     width: 130px;
+    height: 50px;
+     top: 0px;
+   right: -130px;
+   text-align: center;
+   letter-spacing: 5px;
+   font-weight: 900;
+   color: transparent;
+   -webkit-background-clip: text;
+   background-image: linear-gradient(to left, #f70202, #f70606);   
+
+} */
+
+/* .btn2:active{
+    width: 130px;
+    height: 50px;
+    box-shadow: -4px -4px 7px rgb(255 255 255),
+                4px 4px 7px rgb(189 200 213);
+    border-radius: 10px;
+    position: absolute;
+    
+    color: transparent;
+   -webkit-background-clip: text;
+   background-image: linear-gradient(to left, #c20a0a, #000000);   
+   letter-spacing: 5px;
+   font-weight: 900;
+} */
+
+
+
+/* .fa-pizza-slice{
+    height:180px;
+    font-size: 46px;
+    color: transparent;
+   -webkit-background-clip: text;
+    background-image: linear-gradient(to left, #f7f306, #f5dd0b);
+    transform:rotate(20deg);
+}  */
+.fa-pepper-hot{
+    height:180px;
+    font-size: 53px;
+    color: transparent;
+   -webkit-background-clip: text;
+    background-image: linear-gradient(to left, #f72a06, #38110c);
+    transform:rotate(20deg);
+} 

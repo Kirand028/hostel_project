@@ -1,0 +1,445 @@
+body {
+    
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight:400;
+  line-height:1.5;
+  color: #969ba0;
+  background-color: rgb(232 234 236);
+  }
+
+  .admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 90px;
+    background-color: rgb(232 234 236);
+    box-shadow: 4px 4px 7px rgb(189 200 213)
+, 
+    -4px -4px 7px rgb(255 255 255);
+    position: absolute;
+    top:20px;
+    left: 20px;
+    
+      
+ border-top-right-radius: 20px;
+ border-top-left-radius: 40px;
+    }
+
+    .fa-wallet{
+        color: black;
+        font-size: 40px;
+        position: absolute;
+        left: 30px;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #fb00b9, #004efd);
+    }
+
+    .admin h1{
+        letter-spacing: 10px;
+        position: absolute;
+        left: 20px;
+        top:5px;
+        color:black;
+        font-weight: bold;
+        font-size: 28px;
+    }
+.sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 500px;
+    background-color: rgb(230, 231, 233);
+    box-shadow: 4px 4px 7px rgb(189 200 213),
+     -4px -4px 7px rgb(255 255 255)
+     ; 
+
+    position: absolute;
+    top:116px;
+    left: 20px;
+    border-bottom-right-radius:20px ;
+    border-bottom-left-radius: 20px;
+    
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    width: 240px;
+    height: 70px;
+    
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+}
+.img{
+    background-color: rgb(230, 231, 233);
+    box-shadow: 
+    /* logo shadow */
+   
+    /* offset */
+   
+    /*bottom right */
+    4px 4px 7px rgb(189 200 213),
+  
+    /* top left */
+    -4px -4px 7px rgb(255 255 255);
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: 20px;
+    background-image: url(admin.png)   ;
+}
+
+.hiadmin{
+    position: absolute;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    left: 90px;
+    top: 10px;
+    letter-spacing: 2px;
+    
+}
+
+ span{
+    
+    color: #004efd;
+    
+}
+
+h1 span{
+    /* color:maroon; */
+    color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #c20a0a, #000000);
+        font-size: 20px;
+        text-transform: capitalize;
+}
+
+
+ .name{
+    margin-left:100px;
+}
+.id{
+    margin-left:145px;
+}
+.age{
+    margin-left:118px;
+}
+.aadhar{
+    margin-left:67px;
+}
+.addr{
+    margin-left:57px;
+}
+.wemail{
+    margin-left:100px;
+}
+.phone{
+    margin-left:86px;
+}
+
+.email{
+
+    color: #969ba0;
+    position: absolute;
+    top:30px;
+    left: 0px;
+    font-size: small;
+    font-weight: normal;
+
+}
+
+.menu a{
+    
+    text-decoration: none;
+    font-size: large;
+    color: #969ba0;
+    display: block;
+   padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 35px;
+    letter-spacing: 2px;
+    
+    
+}
+
+.menu{
+    margin-top: 50px;
+    margin-left: -16px;
+   
+}
+
+.fa-dashboard, .fa-user-graduate, .fa-user-tie, .fa-hotel, .fa-pizza-slice, .fa-calendar, .fa-hamburger {
+   
+    font-size: 28px;
+    color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #c20a0a, #000000);
+}
+
+
+
+.fa-user-nurse{
+    color: black;
+    font-size: 30px;
+}
+
+
+/* .active{
+    color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to left, #c20a0a, #000000);
+} */
+
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1{
+    position: absolute;
+    color: black;
+    left: 270px;
+    top: 8px;
+    font-size: 41px;
+    font-weight: 600;
+}
+
+.navbar a{
+    background-image: linear-gradient(to left, #fb00b9, #004efd);
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.logout{
+    position: absolute;
+    top: 40px;
+    left: 1080px;
+}
+
+.fa-sign-out-alt{
+    margin-left: 2px;
+    
+
+}
+
+.navbar a:active{
+    background-image: linear-gradient(to right, #fb00b9, #004efd);
+    box-shadow: 4px 4px 8px rgb(255 255 255) , -4px -4px 8px  rgb(189 200 213) ;
+    border: 2px solid blue;
+}
+
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 130px;
+left: 500px;
+}
+
+.card{
+
+
+    width: 600px;
+    height: 350px;
+    background-color: transparent;
+    box-shadow: 6px 6px 12px #b8b9be,
+     -6px -6px 12px #fff; 
+
+     border: 2px solid #d1d9e6;
+
+     border-top-right-radius: 80px;
+     border-bottom-left-radius: 80px;
+    
+}
+
+
+.menu .active{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #c20a0a, #000000);
+}
+
+.icontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.iholder{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(230, 231, 233);
+ 
+    box-shadow: 
+    
+    4px 4px 7px rgb(189 200 213),
+  
+    -4px -4px 7px rgb(255 255 255);
+    border-radius: 150px;
+    position: absolute;
+    top: 30px;
+    left: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iholder1{
+    width: 130px;
+    height: 130px;
+    background-image: url(staff3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: rgb(230, 231, 233); */
+    box-shadow: 
+    
+    4px 4px 7px rgb(189 200 213),
+  
+    -4px -4px 7px rgb(255 255 255);
+    border-radius: 130px;
+}
+h1{
+    height: 20px;
+    position: relative;
+    margin-left: 60px;
+    top: 40px;
+    font-size: 23px;
+}
+ .card span{
+    position: relative;
+    left: 258px;
+    bottom: 35px;
+    display:flex;
+    text-align: center;
+    justify-content: flex-start;
+
+ }
+
+ .card h1{
+    font-size:21px;
+}
+
+ .update{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top:520px;
+    left:415px;
+    width:750px;
+    height:85px;
+    padding: 10px;
+    background-color: rgb(230, 231, 233);
+ 
+    box-shadow: 
+    
+    4px 4px 7px rgb(189 200 213),
+  
+    -4px -4px 7px rgb(255 255 255);
+    border-radius: 55px ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .password{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    height:50px;
+    letter-spacing: 5px;
+   position: absolute;
+   margin-top: -100px;
+    color:#c20a0a;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: rgb(230, 231, 233);
+ 
+    box-shadow: 
+    
+    4px 4px 7px rgb(189 200 213),
+  
+    -4px -4px 7px rgb(255 255 255);
+    border-radius: 10px;
+ }
+
+ .input{
+    position: absolute;
+    font-weight: 600;
+ }
+
+ .upd{
+    position: absolute;
+    margin-top: 95px;
+    width:100px;
+    height:37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(230, 231, 233);
+    
+    border-radius: 14px;
+
+    box-shadow: 
+    
+    4px 4px 7px rgb(189 200 213),
+  
+    -4px -4px 7px rgb(255 255 255);
+ }
+
+ .upd:active{
+    border: 2px solid maroon;
+ }
+
+
+ button{
+    background-color: rgb(230, 231, 233);
+    outline: none;
+    border: none;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #c20a0a, #000000);
+        font-weight: 800;
+    
+ }
+
+ input{
+    background-color: rgb(230, 231, 233);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid maroon;
+    text-align: center;
+    /* border-radius: 3px; */
+ }
+
